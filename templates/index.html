@@ -1,19 +1,90 @@
+<!DOCTYPE HTML>
 <html>
   <head>
     <title>{{page-title}}</title>
-    {{{style-ext 'style.css'}}}
-    
     <script data-main="{{script-url 'main'}}" src="{{component-url 'requirejs/require.js'}}"></script>
-    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+    {{{script-ext 'jquery/jquery.min.js' true}}}
+    <script src="js/config.js"></script>
+    <!-- bxSlider Javascript file -->
+    {{{script-ext 'bxslider-4/jquery.bxslider.min.js' true}}}
+    {{{script-ext 'galleria/src/galleria.js' true}}}
+    <!-- bxSlider CSS file -->
+    {{{style-ext 'normalize.css/normalize.css' true}}}
+    {{{style-ext 'bxslider-4/jquery.bxslider.css' true}}}
+    {{{script-ext 'skeljs/dist/skel.min.js' true}}}
+    {{{script-ext 'skeljs/dist/skel-panels.min.js' true}}}
+    <noscript>
+      {{{style-ext 'skel-noscript.css' }}}
+      {{{style-ext 'style.css'}}}
+      {{{style-ext 'style-desktop.css'}}}
+    </noscript>
+    <style>
+      .galleria{ width: 1200px; height: 800px; background: #4a4a4a;  }
+    </style>
+    <!--[if lte IE 9]><link rel="stylesheet" href="{{{style-ext 'ie9.css'}}}"/><![endif]-->
+    <!--[if lte IE 8]><script src="{{component-url 'html5shiv/dist/html5shiv.js'}}"></script><![endif]-->
+
   </head>
 
   <body>
+    <div id="header-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="12u">
+
+            <header id="header">
+              <h1><a href="index.html" id="logo">departamento las artes</a></h1>
+              <nav id="nav">
+                <a href="index.html" class="current-page-item">Homepage</a>
+                <a href="depto1.html">depto. Nº 1</a>
+                <a href="depto2.html">depto. Nº 2</a>
+                <a href="depto3.html">depto Nº 3</a>
+                <a href="#">contacto</a>
+              </nav>
+            </header>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     {{{body}}}
 
+    <div id="footer-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="8u">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="12u">
+
+            <div id="copyright">
+              <p>Eva Peron 4290 esq. Picasso - Tel. (02954)15571515</p>
+              <p>&copy; Copyrigth | Design: Cristian J. Tosco - <a href="mailto:cristian.tosco@gmail.com">cristian.tosco@gmail.com</a> </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- JavaScript goes in the footer! -->
-  
+
   {{#if options.development}}
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':{{options.lrport}}/livereload.js?snipver=1"></' + 'script>')
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':{{options.lrport}}/livereload.js?snipver=1"></' + 'script>')
+      $(document).ready(function(){
+        $('.bxslider').bxSlider({
+          mode: 'fade',
+          auto: true,
+        });
+      });
     </script>
   {{/if}}
   </body>

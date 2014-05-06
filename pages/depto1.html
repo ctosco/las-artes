@@ -1,0 +1,32 @@
+{
+
+}
+---
+<div id="main">
+  <div class="container">
+    <div class="row main-row">
+      <div class="12u">
+        <h2>Departamento Nº 1</h2>
+        <div class="galleria">
+            <img src={{image-url 'depto1/imagen1.jpg'}}>
+            <img src={{image-url 'depto1/imagen2.jpg'}}>
+            <img src={{image-url 'depto1/imagen3.jpg'}}>
+            <img src={{image-url 'depto1/imagen4.jpg'}}>
+            <img src={{image-url 'depto1/imagen5.jpg'}}>
+            <img src={{image-url 'depto1/imagen6.jpg'}}>
+            <img src={{image-url 'depto1/imagen7.jpg'}}>
+        </div>
+        <script>
+          if (Galleria){
+            Galleria.loadTheme('components/galleria/src/themes/classic/galleria.classic.js');
+            Galleria.configure({
+                transition: 'fade',
+                imageCrop: false
+            });
+            Galleria.run('.galleria');
+          }
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
