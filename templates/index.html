@@ -2,21 +2,21 @@
 <html>
   <head>
     <title>{{page-title}}</title>
-    <script data-main="{{script-url 'main'}}" src="{{component-url 'requirejs/require.js'}}"></script>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
     {{{script-ext 'jquery/jquery.min.js' true}}}
-    <script src="js/config.js"></script>
+    {{{script-ext 'config.js' }}}
+    {{{script-ext 'skeljs/dist/skel.min.js' true}}}
+    {{{script-ext 'skeljs/dist/skel-panels.min.js' true}}}
+    <script data-main="{{script-url 'main.js'}}" src="{{component-url 'requirejs/require.js'}}"></script>
     <!-- bxSlider Javascript file -->
     {{{script-ext 'bxslider-4/jquery.bxslider.min.js' true}}}
     {{{script-ext 'galleria/src/galleria.js' true}}}
     <!-- bxSlider CSS file -->
-    {{{style-ext 'normalize.css/normalize.css' true}}}
     {{{style-ext 'bxslider-4/jquery.bxslider.css' true}}}
-    {{{script-ext 'skeljs/dist/skel.min.js' true}}}
-    {{{script-ext 'skeljs/dist/skel-panels.min.js' true}}}
+    {{{style-ext 'normalize.css/normalize.css' true}}}
     <noscript>
       {{{style-ext 'skel-noscript.css' }}}
       {{{style-ext 'style.css'}}}
