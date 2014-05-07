@@ -45,7 +45,7 @@ module.exports = function (grunt) {
   var gh_commit = userConfig.git.defaultCommit;
   var gh_upstream = userConfig.git.deployUpstream;
   var gh_deploy = userConfig.git.deployBranch;
-  
+
   //////////////////////////////
   //Grunt Config
   //////////////////////////////
@@ -324,7 +324,14 @@ module.exports = function (grunt) {
           return 'cp -r ' + distPath + ' ' + path;
         }
       }
-    }
+    },
+
+    'gh-pages': {
+        options: {
+            base: '.dist'
+          },
+          src: ['**']
+        }
 
   });
 
@@ -360,14 +367,14 @@ module.exports = function (grunt) {
       grunt.task.run(['exec:commit:' + commit]);
     }
 
-    
+
     if (deploy) {
       grunt.task.run(['exec:deploy']);
     }
-    
+
   });
 
-  
+
   //////////////////////////////
   // Deploy Task
   //////////////////////////////
