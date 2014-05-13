@@ -13,6 +13,7 @@
   ////////////////////////
   // Base Import
   ////////////////////////
+  @import "compass/css3/images";
   @import 'partials/global/base';
 
 	body {
@@ -62,7 +63,7 @@
 		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($brown), to($light-brown));
 		background-image: -ms-linear-gradient(top, #008dab, #007294);
 		background-image: -o-linear-gradient(top, #008dab, #007294);
-		background-image: linear-gradient(top, #008dab, #007294);
+        @include background-image(linear-gradient($brown, $light-brown));
 	}
 
 	#header {
@@ -73,7 +74,7 @@
 		border: solid 1px $light-brown-menu;
 		box-shadow: inset 0px 0px 0px 1px $light-brown-menu, 0px 1px 4px 0px rgba(0,0,0,0.10);
 		background-color: #007b9d;
-		background-image: -moz-linear-gradient(top, #008ead, #007b9d);
+		background-image: -moz-linear-gradient(top, $brown-menu, $light-brown-menu);
 		background-image: -webkit-linear-gradient(top, #008ead, #007b9d);
 		background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($brown-menu), to($light-brown-menu));
 		background-image: -ms-linear-gradient(top, #008ead, #007b9d);
@@ -120,8 +121,8 @@
 			}
 
 			#header nav a.current-page-item {
-				background-color: $light-brown-menu;
-				background-image: -moz-linear-gradient(top, #007b99, #007897);
+				background-color: $brown-menu;
+				background-image: -moz-linear-gradient(top, $brown-menu, $brown-menu);
 				background-image: -webkit-linear-gradient(top, #007b99, #007897);
 				background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($brown-menu), to($light-brown-menu));
 				background-image: -ms-linear-gradient(top, #007b99, #007897);
@@ -132,7 +133,7 @@
 
 			#header nav a:hover {
 				background-color: $light-brown-menu;
-				background-image: -moz-linear-gradient(top, #0782a0, #077d9b);
+				background-image: -moz-linear-gradient(top, $light-brown-menu, $light-brown-menu);
 				background-image: -webkit-linear-gradient(top, #0782a0, #077d9b);
 				background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($brown-menu), to($light-brown-menu));
 				background-image: -ms-linear-gradient(top, #0782a0, #077d9b);

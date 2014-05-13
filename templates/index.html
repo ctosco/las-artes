@@ -16,7 +16,6 @@
     {{{script-ext 'galleria/src/galleria.js' true}}}
     <!-- bxSlider CSS file -->
     {{{style-ext 'bxslider-4/jquery.bxslider.css' true}}}
-    {{{style-ext 'normalize.css/normalize.css' true}}}
     <noscript>
       {{{style-ext 'skel-noscript.css' }}}
       {{{style-ext 'style.css'}}}
@@ -75,16 +74,17 @@
     </div>
 
     <!-- JavaScript goes in the footer! -->
-
-  {{#if options.development}}
-    <script>
-      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':{{options.lrport}}/livereload.js?snipver=1"></' + 'script>')
+    <script type="text/javascript">
       $(document).ready(function(){
         $('.bxslider').bxSlider({
           mode: 'fade',
           auto: true,
         });
       });
+    </script>
+  {{#if options.development}}
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':{{options.lrport}}/livereload.js?snipver=1"></' + 'script>')
     </script>
   {{/if}}
   </body>
