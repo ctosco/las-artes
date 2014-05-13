@@ -1,1 +1,1 @@
-require(["helper/util"],function(){});
+console.log("Las Artes");

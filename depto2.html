@@ -10,13 +10,12 @@
     <script src="/las-artes/js/config.js"></script>
     <script src="/las-artes/components/skeljs/dist/skel.min.js"></script>
     <script src="/las-artes/components/skeljs/dist/skel-panels.min.js"></script>
-    <script data-main="/las-artes/js/main.js" src="/las-artes/components/requirejs/require.js"></script>
+    <script data-main="/las-artes/js/main" src="/las-artes/components/requirejs/require.js"></script>
     <!-- bxSlider Javascript file -->
     <script src="/las-artes/components/bxslider-4/jquery.bxslider.min.js"></script>
     <script src="/las-artes/components/galleria/src/galleria.js"></script>
     <!-- bxSlider CSS file -->
     <link rel="stylesheet" href="/las-artes/components/bxslider-4/jquery.bxslider.css">
-    <link rel="stylesheet" href="/las-artes/components/normalize.css/normalize.css">
     <noscript>
       <link rel="stylesheet" href="/las-artes/css/skel-noscript.css">
       <link rel="stylesheet" href="/las-artes/css/style.css">
@@ -103,7 +102,14 @@
     </div>
 
     <!-- JavaScript goes in the footer! -->
-
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.bxslider').bxSlider({
+          mode: 'fade',
+          auto: true,
+        });
+      });
+    </script>
   
   </body>
 </html>
