@@ -6,26 +6,26 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
     <link href="http://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
-    {{{script-ext 'jquery/jquery.min.js' true}}}
-    {{{script-ext 'config.js' }}}
-    {{{script-ext 'skeljs/dist/skel.min.js' true}}}
-    {{{script-ext 'skeljs/dist/skel-panels.min.js' true}}}
-    <script data-main="{{script-url 'main'}}" src="{{component-url 'requirejs/require.js'}}"></script>
+    <script src="components/jquery/jquery.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="components/skeljs/dist/skel.min.js"></script>
+    <script src="components/skeljs/dist/skel-panels.min.js"></script>
+    <script data-main="js/main" src="/components/requirejs/require.js"></script>
     <!-- bxSlider Javascript file -->
-    {{{script-ext 'bxslider-4/jquery.bxslider.min.js' true}}}
-    {{{script-ext 'galleria/src/galleria.js' true}}}
+    <script src="components/bxslider-4/jquery.bxslider.min.js"></script>
+    <script src="components/galleria/src/galleria.js"></script>
     <!-- bxSlider CSS file -->
-    {{{style-ext 'bxslider-4/jquery.bxslider.css' true}}}
+    <link rel="stylesheet" href="components/bxslider-4/jquery.bxslider.css">
     <noscript>
-      {{{style-ext 'skel-noscript.css' }}}
-      {{{style-ext 'style.css'}}}
-      {{{style-ext 'style-desktop.css'}}}
+      <link rel="stylesheet" href="css/skel-noscript.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/style-desktop.css">
     </noscript>
     <style>
       .galleria{ width: 1200px; height: 800px; background: #4a4a4a;  }
     </style>
-    <!--[if lte IE 9]><link rel="stylesheet" href="{{{style-ext 'ie9.css'}}}"/><![endif]-->
-    <!--[if lte IE 8]><script src="{{component-url 'html5shiv/dist/html5shiv.js'}}"></script><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="<link rel="stylesheet" href="css/ie9.css">"/><![endif]-->
+    <!--[if lte IE 8]><script src="components/html5shiv/dist/html5shiv.js"></script><![endif]-->
 
   </head>
 
